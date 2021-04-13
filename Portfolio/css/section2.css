@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,100,400");
+
+#section2 {
+  z-index: 3;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2%;
+  color: #fff;
+  text-shadow: 0 0 4px black;
+  overflow: hidden;
+}
+
+#section2 .container {
+  display: grid;
+  grid-template-columns: 1.8fr 2fr;
+  margin-top: 10%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#section2 h1 {
+  font-weight: 300;
+  font-size: 425%;
+  line-height: 1;
+}
+
+#section2 p {
+  line-height: 2;
+  font-weight: 400;
+  font-size: 130%;
+  margin-top: 2vh;
+}
+
+#section2 .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh !important;
+  overflow: hidden;
+}
+
+#section2 .video-container video {
+  min-width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+#section2 .video-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+#section2 .image {
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+}
+
+#section2 .image img {
+  height: 90%;
+  width: 69%;
+  margin-left: -2%;
+  margin-top: -8%;
+}
+
+#section2 .content {
+  z-index: 4;
+  text-align: justify;
+  height: 100vh;
+  line-height: 1.9;
+  margin-right: 8vw;
+}
+
+@media (max-width: 1200px) {
+  #section2 img {
+    display: none;
+  }
+
+  #section2 .container {
+    display: flex;
+    margin-top: 20vh;
+    margin-right: 20vw;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    /* height: 100vh;
+    width: 100vw; */
+  }
+
+  #section2 .content {
+    /* grid-template-columns: 1; */
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 800px) {
+  #section2 h1 {
+    display: none;
+  }
+
+  #section2 img {
+    display: none;
+  }
+
+  #section2 .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    /* margin-right: 80px; */
+  }
+
+  #section2 .content {
+    grid-template-columns: 1;
+    text-align: justify;
+    line-height: 3;
+  }
+}

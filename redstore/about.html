@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <title>Cart Items - Redstore</title>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="" width="125px"></a>
+                </div>
+
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+
+                <a href="cart.html"><img src="images/cart.png" alt="" width="30px" height="30px" class="cart-target"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+            </div>
+        </div>
+
+    <!-- About Section -->
+    <div class="row">
+         <div class="about col-2">
+                <p>
+                    Redstore has been a sounding name in the sports business, being the official gear supplier of the NBA.
+                    During these trying times, we have expanded online like most of our brother and sister businesses have.
+                </p>
+         
+                <br />
+          
+                <p>
+                    Our official website was created by <u>Greg Thomas Andes</u> of <b>GTA Media</b>.
+                </p>
+         
+                <br />
+         
+                <p>
+                    With decades in the sports industry, we take on projects not only
+                    to create according to the client's specifications.
+                    We give daily updates to ensure that
+                    the orders are aligning properly with the client's goals and expectations.
+                    The end results are the quality that you would expect <i>from us, as always.</i>
+                </p>
+        </div>
+       
+
+            <div class="about2 col-2">
+                <img src="images/profile.jpg" alt="profile picture" class="src">
+            </div>
+            
+
+            <div class="slider"></div>
+        
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download the Redstore App for Android & iOS</p>
+                    <div class="app-logo">
+                        <a href="play.google.com"><img src="images/play-store.png" alt=""></a>
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to All</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="www.twitter.com">Twitter</a></li>
+                        <li><a href="www.instagram.com">Instagram</a></li>
+                        <li><a href="www.youtube.com">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">&copy; 2020 - GTA Media</p>
+
+        </div>
+    </div>
+
+    <!-- JS for BG animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous">
+    </script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        // JS for About Page
+        const logo = document.querySelector(".logo");
+        const cart = document.querySelector(".cart-target");
+        const footer = document.querySelector(".footer");
+        const slider = document.querySelector(".slider");
+        const myImage = document.querySelector(".about2.col-2 img");
+
+        const tl = new TimelineMax();
+
+        tl.fromTo(
+        myImage,
+        1,
+        { height: "0%" },
+        { height: "80%", ease: Power2.easeInOut }
+        )
+        .fromTo(
+            myImage,
+            1.2,
+            { width: "100%" },
+            { width: "80%", ease: Power2.easeInOut }
+        )
+        .fromTo(
+            slider,
+            1.2,
+            { x: "-100%" },
+            { x: "0%", ease: Power2.easeInOut },
+            "-=1.2"
+        )
+        .fromTo(logo, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-=0.5")
+        .fromTo(cart, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-=0.5")
+        .fromTo(footer, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-=0.5");
+    </script>
+</body>
+</html>

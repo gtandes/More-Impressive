@@ -1,0 +1,215 @@
+#section4 {
+  background: black;
+  color: #fff;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-end;
+  height: 100vh;
+  min-width: 100%;
+  z-index: 3;
+  /* max-height: 100vh; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Contact Box CSS */
+.contact {
+  width: 80%;
+  padding: 5%;
+  height: 70vh;
+  display: flex;
+  /* flex-direction: flex-end; */
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* .contact h2 {
+  width: 100%;
+  color: #1cb0e4;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+} */
+
+.contact .row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+
+.contact .row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+.contact .row100 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  color: white;
+}
+
+.contact .row100 .inputBox input,
+.contact .row100 .inputBox.textarea textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 150%;
+  padding: 0 5%;
+  z-index: 1;
+  color: #000;
+}
+
+.contact .row100 .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 5vh;
+  font-size: 150%;
+  padding: 0 2%;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+  margin-top: -0.5vh;
+  /* z-index: 2; */
+}
+
+.contact .row100 .inputBox input:focus+.text,
+.contact .row100 .inputBox input:valid+.text {
+  top: -35px;
+  left: -10px;
+}
+
+.contact .row100 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #1cb0e4;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.contact .row100 .inputBox input:focus~.line,
+.contact .row100 .inputBox input:valid~.line {
+  height: 100%;
+}
+
+.contact .row100 .inputBox.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.contact .row100 .inputBox.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.contact .row100 .inputBox textarea:focus+.text,
+.contact .row100 .inputBox textarea:valid+.text {
+  top: -35px;
+  left: -10px;
+}
+
+.contact .row100 .inputBox textarea:focus~.line,
+.contact .row100 .inputBox textarea:valid~.line {
+  height: 100%;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: #1cb0e4;
+  color: #000;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+/* Socmed links CSS */
+.glow {
+  /* color: #fff;
+    text-align: center; */
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px darkblue,
+      0 0 40px darkblue, 0 0 50px darkblue, 0 0 60px darkblue, 0 0 70px darkblue;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px, 0 0 50px skyblue,
+      0 0 60px skyblue, 0 0 70px skyblue, 0 0 80px skyblue;
+  }
+}
+
+.followers {
+  height: 30vh;
+  min-width: 80vw;
+  margin: 0 auto;
+}
+
+.counters {
+  background: #0f479a;
+  color: #fff;
+  padding: 40px 20px;
+  border-top: 3px solid lightskyblue;
+}
+
+.counters .followers {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.counters i {
+  color: #1cb0e4;
+  margin-bottom: 5px;
+}
+
+.counters .counter {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+footer {
+  align-items: center;
+  text-align: center;
+  /* justify-content: center; */
+  margin-bottom: -3.5vh;
+  /* text-transform: uppercase; */
+  padding-top: 1%;
+  border-top: #deb675 0.25vh solid;
+}
+
+@media (max-width: 700px) {
+  .counters .followers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counters .followers>div:nth-of-type(1),
+  .counters .followers>div:nth-of-type(2) {
+    border-bottom: 1px lightskyblue solid;
+    padding-bottom: 20px;
+  }
+}

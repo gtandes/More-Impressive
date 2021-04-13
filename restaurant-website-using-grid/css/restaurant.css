@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  background-image: linear-gradient(to right,
+      rgb(167, 37, 37),
+      rgb(29, 29, 29));
+}
+
+button {
+  background: #ffc600;
+  border: 0;
+  padding: 10px 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* .wrapper */
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.top {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero hero cta1"
+    "hero hero cta2";
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 400px;
+  background: white url("../images/beef-bowl-cooking-cuisine-262897.jpg");
+  background-size: cover;
+  background-position: center right;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  /* justify-content: start;
+    align-content: center;
+    */
+
+  box-shadow: 0 0 4px black;
+}
+
+.hero>* {
+  background: gold;
+  padding: 5px;
+
+  /* box-shadow: 0 0 4px black; */
+}
+
+.cta {
+  background: gold;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.cta p {
+  margin: 0;
+}
+
+.cta1 {
+  grid-area: cta1;
+  background-image: url("../images/strawberries-1132558.jpg");
+  background-size: cover;
+  background-position: bottom right;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.cta2 {
+  grid-area: cta2;
+  background-image: url("../images/kombucha2.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+/* Navigation */
+
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu a {
+  background: gold;
+  color: black;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+[aria-controls="menu-list"] {
+  display: none;
+}
+
+/* Features */
+
+.features {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid white;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature .icon {
+  font-size: 50px;
+}
+
+/* .feature p {
+  color: rgba(0, 0, 0, 0.5);
+} */
+
+.feature.taco {
+  background-image: url("../images/taco.jpg");
+  background-position: top center;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.feature.beer {
+  background-image: url("../images/two-clear-high-stemmed-glasses-989711.jpg");
+  background-position: top center;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.feature.wine {
+  background-image: url("../images/action-alcohol-art-beverage-391213.jpg");
+  background-position: top right;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.feature.music {
+  background-image: url("../images/lighted-jukebox-beside-white-and-brown-car-768036.jpg");
+  background-position: top center;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+/* About Section */
+.about {
+  /* background: white; */
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+  background-image: url("../images/alcohol-architecture-bar-beer-260922.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px black;
+  box-shadow: 0 0 4px black;
+}
+
+.about img {
+  box-shadow: 0 0 4px black;
+}
+
+.about__details {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Gallery! */
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery h2 {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.gallery h2:before,
+.gallery h2:after {
+  display: block;
+  content: "";
+  height: 10px;
+  /* background: linear-gradient(to left, gold, orange, transparent); OR */
+  background: linear-gradient(to var(--direction, left),
+      gold,
+      orange,
+      transparent);
+}
+
+.gallery h2:after {
+  /* background: linear-gradient(to right, gold, transparent); OR */
+  --direction: right;
+}
+
+.gallery img {
+  width: 100%;
+  box-shadow: 0 0 4px black;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    order: -1;
+    perspective: 800px;
+  }
+
+  [aria-controls="menu-list"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s;
+    padding: 0;
+    margin: 0;
+  }
+
+  [aria-expanded="true"]~ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .top {
+    grid-template-areas:
+      "hero hero"
+      "cta1 cta2";
+  }
+
+  /* About */
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .top {
+    grid-template-areas:
+      "hero"
+      "cta1"
+      "cta2";
+  }
+}

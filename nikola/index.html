@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="has-lightbox">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
+        integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog=="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.css" />
+
+
+
+    <link rel="stylesheet" href="css/simple-lightbox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body id="home">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Nikola</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-a">
+        <div class="container">
+            <div>
+                <h1>The Tech of The Future</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                    dolore vitae rem unde, voluptatum tempore ab ullam laudantium
+                    repellendus beatae maxime, eveniet placeat! Laborum dolorem
+                    cupiditate quos dolore ad provident!
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <img src="images/showcase.jpg" alt="" />
+        </div>
+    </section>
+
+    <!-- Overlay Text -->
+    <section class="section-b">
+        <div class="overlay">
+            <div class="section-b-inner">
+                <h3>Artificial Intelligence</h3>
+                <h2>
+                    Our Intelligence Is What Makes Us Human, And A.I. Is An Extension Of
+                    That Quality.
+                </h2>
+                <p>Artificial Intelligence will reach human levels by around 2029.</p>
+                <!-- <p>Artificial intelligence will reach human levels by around 2029. Follow that out further to, say,
+                    2045, we will have multiplied the intelligence, the human biological machine intelligence of our
+                    civilization a billion-fold. As a technologist, I see how AI and the fourth industrial revolution
+                    will impact every aspect of people’s lives. Success in creating AI would be the biggest event in
+                    human history. Unfortunately, it might also be the last, unless we learn how to avoid the risks.</p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section-c">
+        <div class="gallery">
+            <a href="images/1.jpg" class="big"><img src="images/1.jpg" alt="" /></a>
+            <a href="images/2.jpg" class="big"><img src="images/2.jpg" alt="" /></a>
+            <a href="images/3.jpg" class="big"><img src="images/3.jpg" alt="" /></a>
+            <a href="images/4.jpg" class="big"><img src="images/4.jpg" alt="" /></a>
+            <a href="images/5.jpg" class="big"><img src="images/5.jpg" alt="" /></a>
+            <a href="images/6.jpg" class="big"><img src="images/6.jpg" alt="" /></a>
+        </div>
+    </section>
+
+    <footer class="section-footer">
+        <div class="container">
+            <div>
+                <h2>Follow Us On Social Media</h2>
+                <a href="#"><img src="images/contact.png" alt="Contact Us"></i></a>
+                <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></i></a>
+                <a href="https://youtube.com"><img src="images/youtube.png" alt="Youtube"></i></a>
+            </div>
+
+
+            <div>
+                <h3>Company Info</h3>
+                <ul>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Blog Posts</h3>
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Subscribe</h3>
+                <p>
+                    and receive our newsletters.
+                </p>
+                <form class="mt-1" name="email-form" method="POST" data-netlify="true">
+                    <div class="email-form">
+                        <span class="form-control-wrap"><input type="email" name="email" id="email" size="40"
+                                class="form-control" placeholder="Enter your e-mail here" /></span><button type="submit"
+                            value="Submit" class="form-control submit">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script> -->
+
+    <script src="js/simple-lightbox.min.js"></script>
+
+    <script>
+        (function () {
+            var $gallery = new SimpleLightbox('.gallery a', {});
+        })();
+    </script>
+</body>
+
+</html>

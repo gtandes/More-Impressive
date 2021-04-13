@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="js/cart2.js" async></script>
+
+    <title>Cart Items - Redstore</title>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="" width="125px"></a>
+                </div>
+
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+
+                <a href="cart.html"><img src="images/cart.png" alt="" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+            </div>
+        </div>
+
+    <!-- Cart item details -->
+    <div class="small-container cart-page">
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+
+            <div class="cart-items">
+                <tr class="">
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/buy-1.jpg" alt="">
+                            <div>
+                                <p class="cart-item-title">Red Printed T-Shirt</p>
+                                <small>Price: $49.99</small>
+                                <button class="btn-primary btn-danger" href="">Remove</button>
+                            </div>
+                        </div>
+                        
+                    </td>
+                    <td><input type="number" value="1" class="cart-quantity-input"></td>
+                    <td class="cart-price">$49.99</td>
+                </tr>
+
+                <tr class="">
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/buy-2.jpg" alt="">
+                            <div>
+                                <p class="cart-item-title">HRX Training Shoes</p>
+                                <small>Price: $50.00</small>
+                                <button class="btn-primary btn-danger" href="">Remove</button>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td><input type="number" value="1" class="cart-quantity-input"></td>
+                    <td class="cart-price">$50.00</td>
+                </tr>
+
+                <tr class="">
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/buy-3.jpg" alt="">
+                            <div>
+                                <p class="cart-item-title">Grey Jogger Pants</p>
+                                <small>Price: $50.00</small>
+                                <button class="btn-primary btn-danger" href="">Remove</button>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td><input type="number" value="1" class="cart-quantity-input"></td>
+                    <td class="cart-price">$50.00</td>
+                </tr>
+
+                <tr class="">
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/exclusive.png" alt="">
+                            <div>
+                                <p class="cart-item-title">Mi Band 5</p>
+                                <small>Price: $50.00</small>
+                                <button class="btn-primary btn-danger" href="">Remove</button>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td><input type="number" value="1" class="cart-quantity-input"></td>
+                    <td class="cart-price">$50.00</td>
+                </tr>
+            </div>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td class="cart-total-price">$0.00</td>
+                </tr>
+
+                <tr>
+                    <td>Tax</td>
+                    <td class="tax">$30.00</td>
+                </tr>
+
+                <tr>
+                    <td>Total</td>
+                    <td class="cart-total-price2">$0.00</td>
+                </tr>
+               
+            </table>
+        </div>
+
+        <div class="col-1">
+            <button class="btn-primary btn btn-purchase">PURCHASE</button>
+        </div>
+    </div>
+        
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download the Redstore App for Android & iOS</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to All</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="facebook.com">Facebook</a></li>
+                        <li><a href="twitter.com">Twitter</a></li>
+                        <li><a href="instagram.com">Instagram</a></li>
+                        <li><a href="youtube.com">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <p class="copyright">&copy; 2020 - GTA Media</p>
+
+        </div>
+    </div>
+
+    <!-- JS for toggle menu -->
+    <script src="js/main.js"></script>
+    <script src="js/cart2.js"></script>
+</body>
+</html>
